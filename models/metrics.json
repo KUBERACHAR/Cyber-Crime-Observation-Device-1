@@ -1,59 +1,74 @@
 {
   "overall": {
-    "n": 6000,
-    "accuracy": 0.9988,
-    "precision": 0.9994,
-    "recall": 0.9967,
-    "f1": 0.9981,
-    "false_positive_rate": 0.0002,
+    "n": 11048,
+    "accuracy": 0.9998,
+    "precision": 0.9995,
+    "recall": 0.9995,
+    "f1": 0.9995,
+    "false_positive_rate": 0.0001,
     "confusion": {
-      "tn": 4199,
+      "tn": 9176,
       "fp": 1,
-      "fn": 6,
-      "tp": 1794
+      "fn": 1,
+      "tp": 1870
+    },
+    "roc_auc": 1.0
+  },
+  "real_only": {
+    "n": 5048,
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "false_positive_rate": 0.0,
+    "confusion": {
+      "tn": 4977,
+      "fp": 0,
+      "fn": 0,
+      "tp": 71
     },
     "roc_auc": 1.0
   },
   "per_scenario": {
     "benign_shell": {
-      "n": 396,
+      "n": 474,
       "label": 0,
       "flagged_rate": 0.0
     },
     "browser": {
-      "n": 738,
+      "n": 711,
       "label": 0,
       "flagged_rate": 0.0
     },
     "dev_build": {
-      "n": 475,
+      "n": 460,
       "label": 0,
-      "flagged_rate": 0.0021
+      "flagged_rate": 0.0022
     },
     "download_cradle": {
-      "n": 327,
+      "n": 344,
       "label": 1,
       "flagged_rate": 1.0
     },
     "editor": {
-      "n": 670,
+      "n": 650,
       "label": 0,
       "flagged_rate": 0.0
     },
     "exfil": {
-      "n": 251,
+      "n": 260,
       "label": 1,
-      "flagged_rate": 0.996
+      "flagged_rate": 1.0
     },
     "idle": {
-      "n": 1525,
+      "n": 1502,
       "label": 0,
       "flagged_rate": 0.0
     },
     "lolbin": {
-      "n": 307,
+      "n": 293,
       "label": 1,
-      "flagged_rate": 0.9837
+      "flagged_rate": 0.9966
     },
     "ps_file_dump": {
       "n": 592,
@@ -61,43 +76,53 @@
       "flagged_rate": 1.0
     },
     "ransomware": {
-      "n": 323,
+      "n": 311,
       "label": 1,
       "flagged_rate": 1.0
     },
+    "real_attack": {
+      "n": 71,
+      "label": 1,
+      "flagged_rate": 1.0
+    },
+    "real_normal": {
+      "n": 4977,
+      "label": 0,
+      "flagged_rate": 0.0
+    },
     "sync_extract": {
-      "n": 396,
+      "n": 403,
       "label": 0,
       "flagged_rate": 0.0
     }
   },
   "feature_importance": {
-    "cmd_risk": 0.163,
-    "cmd_len_log": 0.1364,
-    "log_age_s": 0.1241,
-    "cpu_percent": 0.0796,
-    "sys_file_delete_rate": 0.0586,
-    "num_remote_ips": 0.052,
-    "num_children": 0.0516,
-    "write_kb_rate": 0.0476,
-    "num_conns": 0.0435,
-    "is_shell": 0.0413,
-    "parent_is_shell": 0.0413,
-    "is_lolbin": 0.0412,
-    "sys_file_create_rate": 0.0242,
-    "mem_percent": 0.0236,
-    "write_ops_rate": 0.0236,
-    "sys_file_modify_rate": 0.0164,
-    "read_ops_rate": 0.0137,
-    "parent_is_office": 0.012,
-    "num_threads": 0.0044,
-    "sys_cpu_percent": 0.0017
+    "log_age_s": 0.2199,
+    "cmd_risk": 0.1657,
+    "cpu_percent": 0.1196,
+    "is_shell": 0.0832,
+    "write_kb_rate": 0.0791,
+    "write_ops_rate": 0.0381,
+    "sys_file_delete_rate": 0.0368,
+    "num_remote_ips": 0.0343,
+    "cmd_len_log": 0.0322,
+    "sys_file_modify_rate": 0.0318,
+    "is_lolbin": 0.0292,
+    "num_children": 0.0269,
+    "parent_is_shell": 0.0254,
+    "num_conns": 0.0229,
+    "sys_file_create_rate": 0.0167,
+    "mem_percent": 0.014,
+    "read_ops_rate": 0.0097,
+    "parent_is_office": 0.0074,
+    "num_threads": 0.0047,
+    "sys_cpu_percent": 0.0023
   },
-  "inference_ms_per_300_rows": 12.62,
+  "inference_ms_per_300_rows": 25.17,
   "threshold": 0.7,
   "rows": {
-    "train": 24000,
-    "test": 6000,
-    "real": 0
+    "train": 44189,
+    "test": 11048,
+    "real": 25237
   }
 }
