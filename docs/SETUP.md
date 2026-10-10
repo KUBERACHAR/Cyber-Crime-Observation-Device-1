@@ -129,3 +129,7 @@ locally with `python -m ml.train` (it takes a few seconds).
 | Too many false alerts | Record more normal sessions (step C1) and retrain, or raise the threshold: `$env:CCOD_ALERT_THRESHOLD="0.8"` |
 | `running scripts is disabled` | `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned` |
 | No file events | Only `Downloads`, `Documents` and `Desktop` are watched by default. Add more with `--watch D:\path` |
+
+### Attack Demonstration
+* ``` powershell -ExecutionPolicy Bypass -File scripts\run_attack_demo.ps1 -Waves 30 ```
+* ``` powershell -ExecutionPolicy Bypass -File scripts\cleanup_sim.ps1 ```
