@@ -1,0 +1,103 @@
+{
+  "overall": {
+    "n": 6000,
+    "accuracy": 0.9988,
+    "precision": 0.9994,
+    "recall": 0.9967,
+    "f1": 0.9981,
+    "false_positive_rate": 0.0002,
+    "confusion": {
+      "tn": 4199,
+      "fp": 1,
+      "fn": 6,
+      "tp": 1794
+    },
+    "roc_auc": 1.0
+  },
+  "per_scenario": {
+    "benign_shell": {
+      "n": 396,
+      "label": 0,
+      "flagged_rate": 0.0
+    },
+    "browser": {
+      "n": 738,
+      "label": 0,
+      "flagged_rate": 0.0
+    },
+    "dev_build": {
+      "n": 475,
+      "label": 0,
+      "flagged_rate": 0.0021
+    },
+    "download_cradle": {
+      "n": 327,
+      "label": 1,
+      "flagged_rate": 1.0
+    },
+    "editor": {
+      "n": 670,
+      "label": 0,
+      "flagged_rate": 0.0
+    },
+    "exfil": {
+      "n": 251,
+      "label": 1,
+      "flagged_rate": 0.996
+    },
+    "idle": {
+      "n": 1525,
+      "label": 0,
+      "flagged_rate": 0.0
+    },
+    "lolbin": {
+      "n": 307,
+      "label": 1,
+      "flagged_rate": 0.9837
+    },
+    "ps_file_dump": {
+      "n": 592,
+      "label": 1,
+      "flagged_rate": 1.0
+    },
+    "ransomware": {
+      "n": 323,
+      "label": 1,
+      "flagged_rate": 1.0
+    },
+    "sync_extract": {
+      "n": 396,
+      "label": 0,
+      "flagged_rate": 0.0
+    }
+  },
+  "feature_importance": {
+    "cmd_risk": 0.163,
+    "cmd_len_log": 0.1364,
+    "log_age_s": 0.1241,
+    "cpu_percent": 0.0796,
+    "sys_file_delete_rate": 0.0586,
+    "num_remote_ips": 0.052,
+    "num_children": 0.0516,
+    "write_kb_rate": 0.0476,
+    "num_conns": 0.0435,
+    "is_shell": 0.0413,
+    "parent_is_shell": 0.0413,
+    "is_lolbin": 0.0412,
+    "sys_file_create_rate": 0.0242,
+    "mem_percent": 0.0236,
+    "write_ops_rate": 0.0236,
+    "sys_file_modify_rate": 0.0164,
+    "read_ops_rate": 0.0137,
+    "parent_is_office": 0.012,
+    "num_threads": 0.0044,
+    "sys_cpu_percent": 0.0017
+  },
+  "inference_ms_per_300_rows": 12.62,
+  "threshold": 0.7,
+  "rows": {
+    "train": 24000,
+    "test": 6000,
+    "real": 0
+  }
+}

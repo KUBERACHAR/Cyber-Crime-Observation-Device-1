@@ -1,0 +1,17 @@
+# environments / caches
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+
+# live runtime state and raw event logs (contain local paths/usernames - keep private)
+runtime/
+logs/
+
+# transient data
+data/attack_pids.txt
+data/synthetic.csv
+
+# NOTE: data/dataset.csv (training rows) and models/model.pkl ARE committed:
+# they are the bridge between the laptop and Google Colab.

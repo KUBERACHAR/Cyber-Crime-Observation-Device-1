@@ -1,0 +1,11 @@
+# Laptop (VS Code) environment: sensors + dashboard + tests.
+# numpy / scikit-learn / joblib are pinned to the SAME versions as requirements-colab.txt:
+# a model.pkl pickled by one version is not guaranteed to load in another.
+numpy==2.1.3
+scikit-learn==1.5.2
+joblib==1.4.2
+pandas==2.2.3
+psutil>=6.0
+watchdog>=5.0
+streamlit>=1.50
+pytest>=8.0
